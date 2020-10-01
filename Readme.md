@@ -20,8 +20,9 @@ docker run -d --network host --rm \
 ```
 
 # Operations on the cluster
+```
 docker run -it --rm --network host  redis \
 redis-cli --cluster create  127.0.0.1:6379 127.0.0.1:6380 127.0.0.1:6381
 
 docker run -it --rm --network host  redis redis-cli -h 127.0.0.1 -p 6379
-
+```
