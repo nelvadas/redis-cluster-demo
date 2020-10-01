@@ -1,18 +1,21 @@
-# 1st instance 6379
+Create a Host Redis cluster with a couples of nodes
+
+
+# 1st instance on port 6379
 ```
 docker run -d  --network host --rm \
 -v $PWD/node1/redis.conf:/usr/local/etc/redis/redis.conf \
 --name redis-node1 redis redis-server /usr/local/etc/redis/redis.conf
 ```
 
-# Second instance 6380
+# Second instance on port 6380
 ```
 docker run -d --network host --rm \
 -v $PWD/node2/redis.conf:/usr/local/etc/redis/redis.conf \
 --name redis-node2 redis redis-server /usr/local/etc/redis/redis.conf
 ```
 
-#3rd instance 6381
+# 3rd instance on port 6381
 ```
 docker run -d --network host --rm \
 -v $PWD/node3/redis.conf:/usr/local/etc/redis/redis.conf \
